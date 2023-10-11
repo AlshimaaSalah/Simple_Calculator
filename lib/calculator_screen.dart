@@ -73,7 +73,7 @@ class _CalculatorState extends State<Calculator> {
               children: [
                 ButtoonWidget("0", onclickFun),
                 ButtoonWidget(".", onclickFun),
-                ButtoonWidget("=", onclickFun),
+                ButtoonWidget("=", onEqualCliced),
                 ButtoonWidget("+", onOperatorClick),
               ],
             ),
@@ -112,6 +112,7 @@ class _CalculatorState extends State<Calculator> {
     resultTV = savedResult;
     savedOperator = '';
     savedResult = '';
+    setState(() {});
   }
 
   String calculate(String lhs, String operator, String rhs) {
